@@ -5,200 +5,133 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-    <link rel="stylesheet" href="resources/css/style.css" type="text/css">
     <title>Khalid Imran</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
-<body style="background-image: url('resources/media/cover.jpg')">
-<div class="body_wrapper">
-    <div class="nav_left">
-        <div class="nav_left_flex">
-            <div class="nav_inner_section">
-                <a class="arrow_up" onclick="prevSection()"></a>
-                <div id="nav_triggers">
-                    <a class="section-nav_trigger _active" onclick="selectSection(1)"></a>
-                    <a class="section-nav_trigger" onclick="selectSection(2)"></a>
-                    <a class="section-nav_trigger" onclick="selectSection(3)"></a>
-                    <a class="section-nav_trigger" onclick="selectSection(4)"></a>
-                    <a class="section-nav_trigger" onclick="selectSection(5)"></a>
+<body>
+<!--Header-->
+<div class="page">
+    <div id="home" class="show">
+        <header>
+            <div class="menu_toggle">
+                 <span>
+                    <i class="menu_open menu_ham fa fa-bars font-30"></i>
+                    <i class="menu_close menu_ham-close  fa fa-times font-30"></i>
+                 </span>
+                <ul class="menu_items">
+                    <li><a id="portfolio"><i class="icon fa fa-television"></i>Portfolio</a></li>
+                    <li><a id="menu-resume"><i class="icon fa fa-graduation-cap"></i>Resume</a></li>
+                </ul>
+            </div>
+        </header>
+        <section class="main-body ">
+            <div class="bg-overlay"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-6 text-center">
+                        <div class="vert-center">
+                            <div class="animated slideInUp">
+                                <h1 class="name"><span style="font-weight: bold">Kh</span>alid Imr<span
+                                        style="font-weight: bold">an</span></h1>
+                                <h3>Full Stack Web Developer</h3>
+                                <div class="margin-10"></div>
+                                <a class="mail-text" href="mailto:ekhalid090@gmail.com"><b>ekhalid090@gmail.com</b></a>
+                            </div>
+                            <ul class="social_media">
+                                <li><a href="https://khalid-imran.github.io/" target="_blank"><i
+                                        class="icon fa fa-github fa-lg"></i></a></li>
+                                <li><a href="https://www.facebook.com/khalid.emran6" target="_blank"><i
+                                        class="icon fa fa-facebook fa-lg"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/khalid-imran-ba6b95183/" target="_blank"><i
+                                        class="icon fa fa-linkedin fa-lg"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <a class="arrow_down" onclick="nextSection()"></a>
+            </div>
+        </section>
+    </div>
+    <div id="port" class="hide animated rotateInUpRight">
+        <header>
+            <div class="menu_toggle">
+        <span>
+            <i class="menu_open fa fa-bars menu_ham font-30"></i>
+            <i class="menu_close  fa fa-times menu_ham-close font-30"></i>
+        </span>
+                <ul class="menu_items">
+                    <li><a id="menu-home"><i class="icon fa fa-home"></i>Home</a></li>
+                    <li><a id="port-to-resume"><i class="icon fa fa-user"></i>Resume</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="portfolio">
+            <div class="tree-img"></div>
+            <div class="bg-overlay"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="port-text ">&nbsp;Projects Done</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="projects_wrapper ">
+                            <div class="each_project" onclick="window.open('http://newdev.egiye-cholo.com')">
+                                <div class="preview"
+                                     style="background-image: url('img/projects/project_1.jpg')"></div>
+                                <div class="title">Egiye Cholo</div>
+                            </div>
+                            <div class="each_project" onclick="window.open('https://redishketch.github.io/imsmovie/')">
+                                <div class="preview"
+                                     style="background-image: url('img/projects/project_2.jpg')"></div>
+                                <div class="title">IMS Movies</div>
+                            </div>
+                            <div class="each_project" onclick="window.open('https://roomx.co')">
+                                <div class="preview"
+                                     style="background-image: url('img/projects/project_3.jpg')"></div>
+                                <div class="title">RoomX</div>
+                            </div>
+                            <!--<a href="#" class="trigger_btn">View All</a>-->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="nav_right">
-        <div class="nav_inner_section">
-            <!--<a href="javascript://"
-               onclick="SkypeWebControl.SDK.Chat.startChat({ConversationType: 'person', ConversationId: 'shudhui.ami'});"
-               class="each_nav_trigger" style="background-image: url('resources/media/skype.png')"></a>
-            <a onclick="visit('https://www.npmjs.com/~shudhuiami')" class="each_nav_trigger white"
-               style="background-image: url('resources/media/npm.png')"></a>
-            -->
-            <a onclick="visit('https://github.com/khalid-imran')" class="each_nav_trigger"
-               style="background-image: url('resources/media/github.png')"></a>
-            <a onclick="visit('https://www.facebook.com/khalid.emran6')" class="each_nav_trigger"
-               style="background-image: url('resources/media/facebook-o.png')"></a>
-        </div>
-    </div>
-
-    <div class="main_container">
-        <div class="inner_wrapper" id="main_wrapper">
-            <div class="eachSection section_1 _active">
-                <div class="cover_image">
-                    <div class="inner_section"
-                         style="background-image: url('resources/media/covers/cover_1.jpg')"></div>
-                </div>
-                <div class="section_inner_content">
-                    <div class="basic_info">
-                        <div class="info info_1">
-                            <div class="heading">Khalid Imran</div>
-                            <div class="slogan">Full Stack Web Developer</div>
-                        </div>
-                        <div class="info info_2">
-                            <div class="heading">ADDRESS</div>
-                            <div class="slogan">#527, keari-moon Shenpara Parbota, Mirpur-14 Dhaka-1216</div>
-                        </div>
-                        <div class="info info_3">
-                            <div class="heading">CONTACT</div>
-                            <div class="slogan">khalid.imran090@outlook.com</div>
-                            <div class="slogan">+8801684779828</div>
-                        </div>
-                    </div>
-                    <div class="cover_latter">
-                        I am Khalid Imran and I like to introduce myself as a Full Stack Web Developer.
-                        Experienced with latest Javascript (ES5, ES6), most of the development
-                        platforms & dynamic web projects. Capable of working with different programming language and Frameworks
-                        such as JavaScript, VueJS, jQuery, PHP, PHP7, SCSS, LESS, handlebarsJS, Laravel etc.
-
-                        I started coding from a early age and as days passed Programming become my passion.
-                    </div>
-                </div>
+    <div id="resume" class="hide  animated rotateInUpRight">
+        <header>
+            <div class="menu_toggle">
+        <span>
+            <i class="menu_open fa fa-bars menu_ham font-30"></i>
+            <i class="menu_close  fa fa-times menu_ham-close font-30"></i>
+        </span>
+                <ul class="menu_items">
+                    <li><a id="home-from-resume"><i class="icon fa fa-home"></i>Home</a></li>
+                    <li><a id="port-from-resume"><i class="icon fa fa-phone"></i>Portfolio</a></li>
+                </ul>
             </div>
-            <div class="eachSection section_2">
-                <div class="cover_image">
-                    <div class="inner_section"
-                         style="background-image: url('resources/media/covers/cover_1.jpg')"></div>
-                </div>
-                <div class="section_inner_content">
-                    <div class="experience_list">
-                        <div class="each_exprience">
-                            <div class="comapny_name">Dwetech</div>
-                            <div class="position">Front End Developer</div>
-                            <div class="time_line">April 2016 - December 2017</div>
-                        </div>
-                        <div class="each_exprience">
-                            <div class="comapny_name">Freelancer</div>
-                            <div class="position">Backend Developer</div>
-                            <div class="time_line">January 2018 - August 2018</div>
-                        </div>
-                        <div class="each_exprience">
-                            <div class="comapny_name">Freelancer</div>
-                            <div class="position">Full Stack Web Developer</div>
-                            <div class="time_line">September 2018 - Present</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="eachSection section_3">
-                <div class="cover_image">
-                    <div class="inner_section"
-                         style="background-image: url('resources/media/covers/cover_1.jpg')"></div>
-                </div>
-                <div class="section_inner_content">
-                    <div class="skill_expertises">
-                        <div class="each_expertise">
-                            <div class="persentase">99%</div>
-                            <div class="skill_title">HTML/CSS</div>
-                            <div class="preview_track">
-                                <div class="track_inner html" style="width: 99%"></div>
+        </header>
+        <div class="resume">
+            <div class="bg-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="margin-10"></div>
+                        <div class="margin-10"></div>
+                        <div class="full-box">
+                            <div class="head-box">
+                                <div class="circle-img"></div>
                             </div>
-                        </div>
-                        <div class="each_expertise">
-                            <div class="persentase">99%</div>
-                            <div class="skill_title">JavaScript</div>
-                            <div class="preview_track">
-                                <div class="track_inner JS" style="width: 99%"></div>
+                            <div class="info-box">
+                                <p class="name-text">Khalid Imran</p>
                             </div>
-                        </div>
-                        <div class="each_expertise">
-                            <div class="persentase">99%</div>
-                            <div class="skill_title">VueJS</div>
-                            <div class="preview_track">
-                                <div class="track_inner Vue" style="width: 99%"></div>
-                            </div>
-                        </div>
-                        <div class="each_expertise">
-                            <div class="persentase">98%</div>
-                            <div class="skill_title">PHP & MYSQL</div>
-                            <div class="preview_track">
-                                <div class="track_inner PHP" style="width: 98%"></div>
-                            </div>
-                        </div>
-                        <div class="each_expertise">
-                            <div class="persentase">95%</div>
-                            <div class="skill_title">Laravel/Lumen</div>
-                            <div class="preview_track">
-                                <div class="track_inner SCSS" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="each_expertise">
-                            <div class="persentase">99%</div>
-                            <div class="skill_title sm">jQuery & other Javascript library</div>
-                            <div class="skill_title mobile">jQuery & other</div>
-                            <div class="preview_track">
-                                <div class="track_inner JQ" style="width: 99%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="eachSection section_4">
-                <div class="cover_image">
-                    <div class="inner_section"
-                         style="background-image: url('resources/media/covers/cover_1.jpg')"></div>
-                </div>
-                <div class="section_inner_content">
-                    <div class="projects_wrapper">
-                        <div class="each_project" onclick="visit('http://newdev.egiye-cholo.com')">
-                            <div class="preview"
-                                 style="background-image: url('resources/media/projects/project_1.jpg')"></div>
-                            <div class="title">Egiye Cholo</div>
-                        </div>
-                        <div class="each_project" onclick="visit('https://redishketch.github.io/imsmovie/')">
-                            <div class="preview"
-                                 style="background-image: url('resources/media/projects/project_2.jpg')"></div>
-                            <div class="title">IMS Movies</div>
-                        </div>
-                        <div class="each_project" onclick="visit('https://roomx.co')">
-                            <div class="preview"
-                                 style="background-image: url('resources/media/projects/project_3.jpg')"></div>
-                            <div class="title">RoomX</div>
-                        </div>
-                        <a href="#" class="trigger_btn">View All</a>
-                    </div>
-                </div>
-            </div>
-            <div class="eachSection section_5">
-                <div class="cover_image">
-                    <div class="inner_section"
-                         style="background-image: url('resources/media/covers/cover_1.jpg')"></div>
-                </div>
-                <div class="section_inner_content">
-                    <div class="contact_from">
-                        <div class="form">
-                            <div class="form-group">
-                                <label>Your Name</label>
-                                <input name="name" type="text" class="form-control" placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <label>Your Email Address</label>
-                                <input name="email" type="email" class="form-control" placeholder="Your Email Address">
-                            </div>
-                            <div class="form-group">
-                                <label>Your Mail</label>
-                                <textarea name="body" class="form-control" placeholder="Your Mail"></textarea>
-                            </div>
-                            <button class="action_btn" type="submit">Send Email</button>
                         </div>
                     </div>
                 </div>
@@ -206,8 +139,8 @@
         </div>
     </div>
 </div>
-<script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
-<script type="text/javascript" src="resources/js/skype-uri.js"></script>
-<script src="resources/js/script.js" type="text/javascript"></script>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="./js/main.js"></script>
 </html>
