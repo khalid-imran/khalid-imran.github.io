@@ -19,6 +19,9 @@ $('#portfolio').on('click', function () {
         $('#port').removeClass('hide');
         page.removeClass('main-body-rotate');
         $('.main-body').addClass('animated rotateInUpRight');
+        setTimeout(function () {
+            particlesJS.load("particles-js", "js/particle-cnfg.json");
+        }, 1000)
     }, 600)
 });
 $('#menu-home').on('click', function () {
@@ -83,3 +86,5 @@ $('#port-from-resume').on('click', function () {
         $('.main-body').addClass('animated rotateInUpRight');
     }, 500)
 });
+
+
